@@ -1003,8 +1003,6 @@ var _Home = __webpack_require__(32);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-__webpack_require__(33);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.hydrate(_react2.default.createElement(_Home2.default, null), document.querySelector('#root'));
@@ -21282,12 +21280,6 @@ var Home = function (_Component) {
 }(_react.Component);
 
 exports.default = Home;
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'D:\\Project Files\\REACT\\SSR\\Sandbox\\server\\src\\client\\client.css'");
 
 /***/ })
 /******/ ]);
