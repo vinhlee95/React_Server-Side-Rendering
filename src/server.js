@@ -5,11 +5,25 @@ import Home from './client/components/Home';
 
 const app = express();
 
+// tell express to expose public
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
   // render Home to HTML output
   const content = renderToString(<Home />);
 
-  res.send(content);
+  // download client bundle
+  const html = `
+    <html>
+      <head></head>
+      <body>
+        <div id="root">${content}</div>
+        <script src="bundle.js"></script>
+      </body>
+    </html>
+  `;
+
+  res.send(html);
 })
 
 
