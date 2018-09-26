@@ -6,8 +6,8 @@ const app = express();
 // tell express to expose public
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.send(htmlRenderer());
+app.get('*', (req, res) => {
+  res.send(htmlRenderer(req));
 })
 
 

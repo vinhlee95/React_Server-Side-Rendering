@@ -1,11 +1,16 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import Home from '../client/components/Home';
+import { StaticRouter } from 'react-router-dom';
+import Routes from '../client/Routes';
 
-module.exports = () => {
+module.exports = (req) => {
 
   // render Home to HTML output
-  const content = renderToString(<Home />);
+  const content = renderToString(
+    <StaticRouter location={req.url} context={{}} >
+      <Routes />
+    </StaticRouter>
+  );
 
   // download client bundle
   return `
